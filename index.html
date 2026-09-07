@@ -1,0 +1,2796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TASPEN Online Services</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="https://tos.taspen.co.id/assets/images/logotaspen.png">
+  <!-- Form step -->
+  <link href="https://tos.taspen.co.id/assets/vendor/jquery-steps/css/jquery.steps.css" rel="stylesheet">
+  <link href="https://tos.taspen.co.id/assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link href="https://tos.taspen.co.id/assets/css/style.css" rel="stylesheet">
+  <link href="https://tos.taspen.co.id/assets/css/custom.css" rel="stylesheet">
+  <link href="https://tos.taspen.co.id/assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="https://tos.taspen.co.id/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://tos.taspen.co.id/assets/vendor/select2/css/select2.min.css">
+  <link rel="stylesheet" href="https://tos.taspen.co.id/assets/vendor/pickadate/themes/default.css">
+  <link rel="stylesheet" href="https://tos.taspen.co.id/assets/vendor/pickadate/themes/default.date.css">
+  <link href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet" type="text/css" />
+
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <style type="text/css">
+  .subfooter {
+    background-image:url('https://tos.taspen.co.id/assets/images/footer.png');
+    background-repeat: no-repeat;
+    height:auto;
+  }
+  </style>
+  <meta name="csrf-token" content="1rn7AGJRGpalR87uHyygoxthn25BlEd3E5MZhQ94">
+
+</head>
+<body>
+  
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <style>
+    #preloader {
+      z-index: 2000;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      display: block;
+      opacity: 0.8;
+    }
+
+    .loading-image {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+    }
+    </style>
+
+    <div id="preloader">
+      <center>
+        <div class="loading-image" style="width:300px; height:300px;">
+          <img  src="https://tos.taspen.co.id/assets/images/loader.svg" alt="Loading..." />
+          <p><b>Mohon tunggu...</b></p>
+        </div>
+      </center>
+    </div>
+        <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      
+      <div class="header">
+    <div class="header-content">
+        <nav class="navbar navbar-expand">
+            <div class="collapse navbar-collapse justify-content-between">
+                <div class="header-left">
+                  <a href="https://tos.taspen.co.id"><img alt="image" height="100" src="https://tos.taspen.co.id/assets/images/logotaspen.png"></a>
+                </div>
+
+                <ul class="navbar-nav header-right">
+                                         <li class="nav-item"><a href="https://tos.taspen.co.id/login"><button type="submit" class="btn btn-outline-primary btn-xs">Masuk</button></a></li>
+                     <li class="nav-item"><a href="https://tos.taspen.co.id/daftar"><button type="submit" class="btn btn-primary btn-xs">Daftar</button></a></li>
+                                    </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- start of banner -->
+<div class="bootstrap-carousel" style="padding-top:5.5rem">
+    <div data-ride="carousel" class="carousel slide" id="carouselExampleCaptions">
+        <!-- <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carouselExampleCaptions">
+            </li>
+            <li data-slide-to="1" data-target="#carouselExampleCaptions" class=""></li>
+            <li data-slide-to="2" data-target="#carouselExampleCaptions" class=""></li>
+        </ol> -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="https://tos.taspen.co.id/assets/images/toos.png" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- <h5 style="font-size:40px">TASPEN ONLINE SERVICES</h5> -->
+                    <!-- <p>Layanan Online terintegrasi untuk peserta TASPEN</p> -->
+                </div>
+            </div>
+            <!-- <div class="carousel-item">
+                <img alt="" class="d-block w-100" src="https://tos.taspen.co.id/assets/images/header.jpg">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div> -->
+        </div>
+        <!-- <a data-slide="prev" href="#carouselExampleCaptions" class="carousel-control-prev"><span
+                class="carousel-control-prev-icon"></span> <span
+                class="sr-only">Previous</span>
+        </a>
+        <a data-slide="next" href="#carouselExampleCaptions" class="carousel-control-next"><span
+                class="carousel-control-next-icon"></span> <span
+                class="sr-only">Next</span></a> -->
+    </div>
+</div>
+<!-- end of banner -->
+
+		    <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body1" style="min-height: auto;">
+    			<div class="container-fluid">
+            <div class="row page-titles mx-0">
+    <div class="col-sm-6 p-md-0">
+        <div class="welcome-text">
+        </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+     <a href="https://cekbansos.kemensos.go.id">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNMEVsd4qwChzQJlosDk_M2uJ4bNGnrpaCQDWr1ZT0P9Ii1Ankkc4oG2WY&s=10" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Cek Bansos Kemensos</p>
+						<small>PENCARIAN DATA PENERIMA MANFAAT BANSOS</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+	    
+    <a href="https://tos.taspen.co.id/kartuDigital">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/rekeningonline.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Kartu Digital</p>
+						<small>Kartu digital Kepesertaan</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/loginesptb">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/queue.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Lapor SPTB</p>
+						<small>Pelaporan SPTB</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+	<div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/eklaim">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/klaim.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Klaim Online</p>
+						<small>Layanan Klaim secara online</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/nonklaim">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/klaim.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Pengajuan Non Klaim</p>
+						<small>Layanan Pengajuan Selain Klaim</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/eklaim/lacakKlaimOnline">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/tracking.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Lacak Pengajuan Online</p>
+						<small>Lacak Pengajuan Klaim atau Non Klaim Online Anda</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/estimasiManfaat">
+    <div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/premi2.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Estimasi Manfaat THT dan Pensiun</p>
+						<small>Estimasi Manfaat Tabungan Hari Tua dan Pensiun</small>
+					</div>
+				</div>
+			</div>
+		</div>
+  </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/getDapem">
+		<div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/dapem.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Pensiun Bulanan</p>
+						<small>Informasi Dana Pensiun Bulanan untuk Pensiunan</small>
+					</div>
+				</div>
+			</div>
+		</div>
+    </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a href="https://tos.taspen.co.id/esptpajakpensiun">
+    <div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/pajak.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Bukti Potong Pajak Pensiun</p>
+						<small>Informasi Bukti Potong Pajak untuk pensiunan</small>
+					</div>
+				</div>
+			</div>
+		</div>
+    </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a target="_blank" href="https://tcare.taspen.co.id/index.php/tcare/pertanyaan">
+    <div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/tcare.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">TASPEN Care</p>
+						<small>Layanan untuk menyampaikan keluhan atau pertanyaan</small>
+					</div>
+				</div>
+			</div>
+		</div>
+    </a>
+	</div>
+  <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-3 col-sm-3">
+    <a target="_blank" href="https://tos.taspen.co.id/surveyTaspenGroup">
+    <div class="widget-stat card">
+			<div class="card-body p-4">
+				<div class="media ai-icon">
+					<span class="mr-3 bgl-primary text-primary">
+						<img src="https://tos.taspen.co.id/assets/images/topup.png" alt="" style="width:50px">
+					</span>
+					<div class="media-body">
+						<p class="mb-0 text-black">Survey Kebutuhan Peserta</p>
+						<small>Survey untuk peningkatan layanan Taspen Group</small>
+					</div>
+				</div>
+			</div>
+		</div>
+    </a>
+</div>
+</div>
+          </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <div class="row" style="background:white;padding:30px;">
+          <div class="col-lg-12">
+            <a href="https://tos.taspen.co.id/survey/form"><img src="https://tos.taspen.co.id/assets/images/bannersurvey.png" class="d-block w-100" alt="" style="height:auto; width:auto"></a>
+          </div>
+        </div>
+        <div class="row" style="background:white;padding:30px;">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-6">
+            <br/><br/><br/><br/>
+            <h1 style="font-size:40px;font-weight:bold;color:#005281">Aplikasi Andal, semakin mudah bersama TASPEN</h1>
+            <b>Praktis dan Efisien layanan dalam genggaman. Aplikasi Andal by Taspen adalah aplikasi untuk peserta TASPEN mendapatkan pelayanan secara online.</b>
+            <br/><br/>
+            <div class="row">
+              <div class="col-lg-6">
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.taspen.tcds&hl=id"><img src="https://tos.taspen.co.id/assets/images/playstore.png" alt=""></a>
+                <a target="_blank" href="https://apps.apple.com/id/app/andal-by-taspen/id6472796492?l=id"><img src="https://tos.taspen.co.id/assets/images/appstore.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <img src="https://tos.taspen.co.id/assets/images/andal.png" alt="" style="height:400px">
+          </div>
+          <div class="col-lg-1"></div>
+        </div>
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="subfooter">
+              <div class="row" style="padding:40px;padding-bottom:0px">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2">
+                  <img src="https://tcare.taspen.co.id/assets/images/logo_taspen.png" style="height:90px"/>
+                  <br/>
+                  <br/>
+                  <h4 style="color:white">PT Taspen (Persero)</h4>
+                  <h5 style="color:white">"Andal Melayani"</h5>
+
+                </div>
+                <div class="col-lg-2">
+                  <h4 style="color:white">HUBUNGI KAMI</h4>
+                  <p style="color:white">Call Center:<br/> 1500 919</p>
+                  <hr/>
+                  <p style="color:white">Kantor Pusat:<br/>Jalan Letjend Suprapto No.45, Cempaka Putih, Kota Jakarta Pusat, Jakarta 10520</p>
+                </div>
+                <div class="col-lg-2">
+                  <h4 style="color:white">LINK LAIN</h4>
+                  <p style="color:white"><a target="_blank" href="https://www.taspen.co.id">Website Taspen</a></p>
+                  <hr/>
+                </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2"></div>
+              </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2021 - 2023 Taspen. All right reserved</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    
+    <!-- Required vendors -->
+<script src="https://tos.taspen.co.id/assets/vendor/global/global.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/custom.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/deznav-init.js"></script>
+
+<!-- Counter Up -->
+<script src="https://tos.taspen.co.id/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+<!-- Datatable -->
+<script src="https://tos.taspen.co.id/assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/plugins-init/datatables.init.js"></script>
+
+<script src="https://tos.taspen.co.id/assets/vendor/jquery-steps/build/jquery.steps.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/vendor/jquery-validation/jquery.validate.min.js"></script>
+<!-- Form validate init -->
+<script src="https://tos.taspen.co.id/assets/js/plugins-init/jquery.validate-init.js"></script>
+<!-- Form step init -->
+<script src="https://tos.taspen.co.id/assets/js/plugins-init/jquery-steps-init.js"></script>
+
+
+<script src="https://tos.taspen.co.id/assets/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+
+<script src="https://tos.taspen.co.id/assets/vendor/select2/js/select2.full.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/plugins-init/select2-init.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/webcam.min.js"></script>
+
+<!-- pickdate -->
+<script src="https://tos.taspen.co.id/assets/vendor/pickadate/picker.js"></script>
+<script src="https://tos.taspen.co.id/assets/vendor/pickadate/picker.date.js"></script>
+
+<script type="text/javascript" src="https://tos.taspen.co.id/assets/datepicker/jquery-ui.js"></script>
+
+<script src="https://tos.taspen.co.id/assets/js/custom.min.js"></script>
+<script src="https://tos.taspen.co.id/assets/js/deznav-init.js"></script>
+<script src="https://tos.taspen.co.id/assets/vendor/owl-carousel/owl.carousel.js"></script>
+
+
+
+<script type="text/javascript">
+function submitAntrian() {
+  var a = document.getElementById("kepesertaan").value;
+  var b = document.getElementById("nama").value;
+  var c = document.getElementById("no_hp").value;
+  var d = document.getElementById("id_mpp").value;
+  var e = document.getElementById("tgldatang").value;
+  var f = document.getElementById("waktudatang").value;
+  var response = grecaptcha.getResponse();
+
+  if(a=='' || b=='' || c=='' || d=='' || e=='' || f=='' || response.length==0){
+    alert('Semua Kolom harus diisi!');
+  } else {
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "submitAntrianMPP",
+      data: {
+              "kepesertaan":a,
+              "nama":b,
+              "no_hp":c,
+              "id_mpp":d,
+              "tanggal_datang":e,
+              "jam_datang":f
+            },
+      cache: false,
+      success: function(msg){
+        $("#warning").html(msg);
+        $("#preloader").hide();
+        var valid = document.getElementById("valid").value;
+        if(valid=='0'){
+          window.location.href = "https://tos.taspen.co.id/ticketOnline";
+        } else {
+          document.getElementById("kepesertaan1").value = a;
+          document.getElementById("nama1").value = b;
+          document.getElementById("no_hp1").value = c;
+          document.getElementById("id_mpp1").value = d;
+          document.getElementById("tgldatang1").value = e;
+          document.getElementById("waktudatang1").value = f;
+          $('#ModalCenter').modal('show');
+        }
+      }
+    });
+  }
+}
+
+$('#myForm').on('submit', function(e) {
+  var kepesertaan = document.getElementById("kepesertaan");
+  var nama = document.getElementById("nama");
+  var no_hp = document.getElementById("no_hp");
+  document.getElementById("getnama").value = nama;
+
+  e.preventDefault(); //stop submit
+
+  if ($('#kepesertaan').is('1')) {
+    $('#ModalCenter').modal('show');
+  }
+});
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+function myValidation(atr) {
+    var file = atr.files[0];
+    var fsize = Math.round((file.size / 1024));
+    var ftype = file.type;
+
+    if (fsize > 3000) {
+        alert('File Lebih dari 3 mb: ' + file.name);
+        atr.value = '';
+    }
+
+    if (!['application/pdf', 'image/png', 'image/jpg', 'image/jpeg', 'image/png'].includes(ftype)) {
+        alert('File yang di upload Hanya Format PDF, PNG, JPG dan JPEG');
+        atr.value = '';
+    }
+
+}
+
+$("#link").hide();
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        // navigator.geolocation.watchPosition(showPosition, showError);
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    $('#long').val(position.coords.longitude);
+    $('#lat').val(position.coords.latitude);
+
+    $("#link").show();
+    http://www.google.com/maps/place/49.46800006494457,17.11514008755796/@49.46800006494457,17.11514008755796,17z
+        $('#link').attr('href', 'http://www.google.com/maps/dir//' + position.coords.latitude + ',' + position.coords.longitude + '/@' + position.coords.latitude + ',' + position.coords.longitude + ',17z');
+
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("location dennied");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+
+$('#tgldatang').on('change', function(e) {
+  var id_mpp = document.getElementById('id_mpp').value;
+  var tgldatang = document.getElementById('tgldatang').value;
+  if(id_mpp!='' && tgldatang!=''){
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "getWaktuMPP",
+    data: {"id_mpp":id_mpp, "tgldatang":tgldatang},
+    cache: false,
+    success: function(msg){
+      $("#jam_datang").html(msg);
+      $("#preloader").hide();
+    }
+  });
+  }
+});
+
+$('#id_mpp').on('change', function(e) {
+  var id_mpp = document.getElementById('id_mpp').value;
+  var tgldatang = document.getElementById('tgldatang').value;
+  if(id_mpp!='' && tgldatang!=''){
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "getWaktuMPP",
+      data: {"id_mpp":id_mpp, "tgldatang":tgldatang},
+      cache: false,
+      success: function(msg){
+        $("#jam_datang").html(msg);
+        $("#preloader").hide();
+      }
+    });
+  }
+});
+
+$(document).ready(function () {
+    function disabledays(date) {
+      var ymd = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+          //if u have to disable a list of day
+           var removeDays = ["2022-7-29","2022-7-30","2022-10-08","2022-10-08","2022-12-25"];
+           if ($.inArray(ymd, removeDays) >= 0) {
+          return [false];
+      } else {
+          //Show accept sundays
+          var day = date.getDay();
+          return [(day == 1 || day == 2 || day == 3 || day == 4 ||day == 5)];
+      }
+  }
+
+  $("#tgldatang").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'yy-mm-dd',
+      beforeShowDay: disabledays,
+      minDate: '0',
+      maxDate: '+14d'
+  });
+
+  $("#tgllhr").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'dd-mm-yy',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $("#tgllhrymk").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'dd-mm-yy',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $("#tglkejadian").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'dd-mm-yy',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $("#tgl_lahir_pasangan").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'yy-mm-dd',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $("#tgl_menikah").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'yy-mm-dd',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $(".tgl_lahir_anak").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'yy-mm-dd',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $(".tgl_sks").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      dateFormat: 'yy-mm-dd',
+      yearRange: '-100:+0',
+      maxDate: '0'
+  });
+
+  $("#btn_pengajuan").hide();
+  $("#status_peserta").hide();
+  $("#jenis_klaim").hide();
+  $("#klaimlain").hide();
+  $("#step2").hide();
+  $("#step3").hide();
+  $("#step4").hide();
+  $("#step5").hide();
+  $('#rek_mantap').show();
+  $("#ktp_camera").hide();
+  $("#btn1").hide();
+  $("#btn2").hide();
+
+  $("#pstep2").hide();
+  $("#pstep3").hide();
+  $("#pstep4").hide();
+
+  $("#regis2").hide();
+  $("#regis3").hide();
+  $("#isipemohon").hide();
+  $("#showlistpemohon").hide();
+  $("#ymk1").hide();
+  $("#ymk2").hide();
+  $("#tpb-modal").hide();
+  $("#tds-modal").hide();
+
+  $('#show_ymk').on('change', function(e) {
+    var listymk = document.getElementById('show_ymk').value;
+    document.getElementById("isinamaymksubmit").value = listymk;
+  });
+
+  $("#ktp").click(function () {
+      Webcam.reset();
+      Webcam.set({
+          width: 400,
+          height: 240,
+          dest_width: 640,
+          dest_height: 480,
+          image_format: 'jpeg',
+          flip_horiz: true,
+          jpeg_quality: 90
+      });
+      Webcam.set('constraints', {facingMode: 'environment'});
+      Webcam.attach('#my_camera');
+      $("#ktp_camera").show();
+      $("#btn1").show();
+      $("#btn2").hide();
+  });
+
+  $('#show_lpemohon').on('change', function(e) {
+    var listpemohon = document.getElementById('show_lpemohon').value;
+    if(listpemohon!='xx'){
+      $("#isipemohon").hide();
+      var showpemohon = document.getElementById('show_lpemohon').value;
+      document.getElementById('nama_pemohon').value = showpemohon;
+    }else {
+      $("#isipemohon").show();
+      document.getElementById('nama_pemohon').value = "";
+    }
+  });
+
+  $("#foto").click(function () {
+      Webcam.reset();
+      Webcam.set({
+          width: 400,
+          height: 240,
+          dest_width: 640,
+          dest_height: 480,
+          image_format: 'jpeg',
+          flip_horiz: true,
+          jpeg_quality: 90
+      });
+      Webcam.set('constraints', {facingMode: ''});
+      Webcam.attach('#my_camera');
+      $("#ktp_camera").show();
+      $("#btn2").show();
+      $("#btn1").hide();
+  });
+
+  $('#take_snapshot').click(function () {
+      Webcam.snap(function (data_uri) {
+          $.ajax({
+              type: 'POST',
+              url: 'take_snapshot',
+              data: {image: data_uri},
+              success: function (data) {
+                  if (data.status) {
+                      $('#message').html("<div class='alert alert-success'>" + data.message + "</div>");
+                      $('#imageabsensi').remove();
+                      $('#results').append("<img src='" + data_uri + "' id='imageabsensi' style='width: 260px; height:200px; -moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);'/><br><br>");
+                      $('#take_snapshot').prop('disabled', true);
+                      $('#gambar').val(data.image_name);
+                      $("#ktp_camera").hide();
+                      jlh++;
+                  } else {
+                      $('#message').html("<div class='alert alert-danger'>" + data.message + "</div>");
+                      $('#take_snapshot').prop('disabled', true);
+                  }
+                  setTimeout(function () {
+                      $('#message').html('');
+                      $('#take_snapshot').removeAttr('disabled');
+                  }, 2000);
+              }
+
+          });
+      });
+  });
+
+  $('#take_snapshot2').click(function () {
+      Webcam.snap(function (data_uri) {
+          $.ajax({
+              type: 'POST',
+              url: 'take_snapshot',
+              data: {image: data_uri},
+              success: function (data) {
+                  if (data.status) {
+                      $('#message').html("<div class='alert alert-success'>" + data.message + "</div>");
+                      $('#imageabsensi2').remove();
+                      $('#results2').append("<img src='" + data_uri + "' id='imageabsensi2' style='width: 260px; height:200px; -moz-transform: scaleX(-1);-o-transform: scaleX(-1);-webkit-transform: scaleX(-1);transform: scaleX(-1);'/><br><br>");
+                      $('#take_snapshot2').prop('disabled', true);
+                      $('#gambar2').val(data.image_name);
+                      $("#ktp_camera").hide();
+                      jlh++;
+                  } else {
+                      $('#message').html("<div class='alert alert-danger'>" + data.message + "</div>");
+                      $('#take_snapshot2').prop('disabled', true);
+                  }
+                  setTimeout(function () {
+                      $('#message').html('');
+                      $('#take_snapshot2').removeAttr('disabled');
+                  }, 2000);
+              }
+
+          });
+      });
+  });
+
+  var pensiun = document.getElementById('pensiun').value;
+  if(pensiun=='1'){
+    sweetAlert("Oops...", "Menu ini hanya tersedia untuk ASN Aktif", "error");
+  }
+
+});
+var jenis_id    = 0;
+var jenis_kps   = 0;
+var jenis_hasil = 0;
+var status_id = 0;
+var peserta_tsp = null;
+var tpb = 0;
+var tss = 0;
+var tds = 0;
+var tbl1 = 0;
+var tbl2 = 0;
+var tbl3 = 0;
+var tsh = 0;
+var taspro1 = 0;
+var taspro2 = 0;
+var taspro3 = 0;
+var jenkel = null;
+var usia  = null;
+var pendapatan  = null;
+
+function cekDataSurvey(elem){
+  if (elem.id == "pst1") {
+    peserta_tsp = 1;
+    $("#produk_taspen_groups").show();
+    $("#pst1").removeClass('btn btn-outline-info');
+    $("#pst1").addClass('btn btn-info');
+    $("#pst2").removeClass('btn btn-info');
+    $("#pst2").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "pst2") {
+    peserta_tsp = 0;
+    $("#produk_taspen_groups").show();
+    $("#pst2").removeClass('btn btn-outline-info');
+    $("#pst2").addClass('btn btn-info');
+    $("#pst1").removeClass('btn btn-info');
+    $("#pst1").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "id1") { //show info taspen
+    status_id = 1;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+
+    $("#step1").hide();
+    $("#step2").show();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").show();
+    $("#pstep3").hide();
+    $("#pstep4").hide();
+  }
+  if (elem.id == "id2") { //show info taspen life proteksi masa depan
+    status_id = 2;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").show();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").hide();
+    $("#pstep3").show();
+    $("#pstep4").hide();
+  }
+  if (elem.id == "id3") { //show info taspen life Perlindungan kesehatan
+    status_id = 3;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").hide();
+    $("#step4").show();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").hide();
+    $("#pstep3").show();
+    $("#pstep4").hide();
+  }
+  if (elem.id == "id4") { //show info taspen properti
+    status_id = 4;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").show();
+
+    $("#pstep1").hide();
+    $("#pstep2").hide();
+    $("#pstep3").hide();
+    $("#pstep4").show();
+  }
+  if(elem.id == "jenkell"){
+    jenkel = "L";
+    $("#jenkell").removeClass('btn btn-outline-info');
+    $("#jenkell").addClass('btn btn-info');
+    $("#jenkelp").removeClass('btn btn-info');
+    $("#jenkelp").addClass('btn btn-outline-info');
+  } else if(elem.id == "jenkelp"){
+    jenkel = "P";
+    $("#jenkelp").removeClass('btn btn-outline-info');
+    $("#jenkelp").addClass('btn btn-info');
+    $("#jenkell").removeClass('btn btn-info');
+    $("#jenkell").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "usia1"){
+    usia = "< 25";
+    $("#usia1").removeClass('btn btn-outline-info');
+    $("#usia1").addClass('btn btn-info');
+    $("#usia2").removeClass('btn btn-info');
+    $("#usia2").addClass('btn btn-outline-info');
+    $("#usia3").removeClass('btn btn-info');
+    $("#usia3").addClass('btn btn-outline-info');
+    $("#usia4").removeClass('btn btn-info');
+    $("#usia4").addClass('btn btn-outline-info');
+    $("#usia5").removeClass('btn btn-info');
+    $("#usia5").addClass('btn btn-outline-info');
+  } else if(elem.id == "usia2"){
+    usia = "25 - 34";
+    $("#usia2").removeClass('btn btn-outline-info');
+    $("#usia2").addClass('btn btn-info');
+    $("#usia1").removeClass('btn btn-info');
+    $("#usia1").addClass('btn btn-outline-info');
+    $("#usia3").removeClass('btn btn-info');
+    $("#usia3").addClass('btn btn-outline-info');
+    $("#usia4").removeClass('btn btn-info');
+    $("#usia4").addClass('btn btn-outline-info');
+    $("#usia5").removeClass('btn btn-info');
+    $("#usia5").addClass('btn btn-outline-info');
+  } else if(elem.id == "usia3"){
+    usia = "36 - 44";
+    $("#usia3").removeClass('btn btn-outline-info');
+    $("#usia3").addClass('btn btn-info');
+    $("#usia1").removeClass('btn btn-info');
+    $("#usia1").addClass('btn btn-outline-info');
+    $("#usia2").removeClass('btn btn-info');
+    $("#usia2").addClass('btn btn-outline-info');
+    $("#usia4").removeClass('btn btn-info');
+    $("#usia4").addClass('btn btn-outline-info');
+    $("#usia5").removeClass('btn btn-info');
+    $("#usia5").addClass('btn btn-outline-info');
+  } else if(elem.id == "usia4"){
+    usia = "45 - 55";
+    $("#usia4").removeClass('btn btn-outline-info');
+    $("#usia4").addClass('btn btn-info');
+    $("#usia1").removeClass('btn btn-info');
+    $("#usia1").addClass('btn btn-outline-info');
+    $("#usia2").removeClass('btn btn-info');
+    $("#usia2").addClass('btn btn-outline-info');
+    $("#usia3").removeClass('btn btn-info');
+    $("#usia3").addClass('btn btn-outline-info');
+    $("#usia5").removeClass('btn btn-info');
+    $("#usia5").addClass('btn btn-outline-info');
+  } else if(elem.id == "usia5"){
+    usia = "> 55";
+    $("#usia5").removeClass('btn btn-outline-info');
+    $("#usia5").addClass('btn btn-info');
+    $("#usia1").removeClass('btn btn-info');
+    $("#usia1").addClass('btn btn-outline-info');
+    $("#usia2").removeClass('btn btn-info');
+    $("#usia2").addClass('btn btn-outline-info');
+    $("#usia3").removeClass('btn btn-info');
+    $("#usia3").addClass('btn btn-outline-info');
+    $("#usia4").removeClass('btn btn-info');
+    $("#usia4").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tpb1"){
+      tpb = "Ya";
+      $("#tpb1").removeClass('btn btn-outline-info');
+      $("#tpb1").addClass('btn btn-info');
+      $("#tpb2").removeClass('btn btn-info');
+      $("#tpb2").addClass('btn btn-outline-info');
+  } else if(elem.id == "tpb2"){
+      tpb = "Tidak";
+      $("#tpb2").removeClass('btn btn-outline-info');
+      $("#tpb2").addClass('btn btn-info');
+      $("#tpb1").removeClass('btn btn-info');
+      $("#tpb1").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tss1"){
+      tss = "Ya";
+      $("#tss1").removeClass('btn btn-outline-info');
+      $("#tss1").addClass('btn btn-info');
+      $("#tss2").removeClass('btn btn-info');
+      $("#tss2").addClass('btn btn-outline-info');
+  } else if(elem.id == "tss2"){
+      tss = "Tidak";
+      $("#tss2").removeClass('btn btn-outline-info');
+      $("#tss2").addClass('btn btn-info');
+      $("#tss1").removeClass('btn btn-info');
+      $("#tss1").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tds1"){
+      tds = "Ya";
+      $("#tds1").removeClass('btn btn-outline-info');
+      $("#tds1").addClass('btn btn-info');
+      $("#tds2").removeClass('btn btn-info');
+      $("#tds2").addClass('btn btn-outline-info');
+  } else if(elem.id == "tds2"){
+      tds = "Tidak";
+      $("#tds2").removeClass('btn btn-outline-info');
+      $("#tds2").addClass('btn btn-info');
+      $("#tds1").removeClass('btn btn-info');
+      $("#tds1").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tbl11"){
+      tbl1 = "Ya";
+      $("#tbl11").removeClass('btn btn-outline-info');
+      $("#tbl11").addClass('btn btn-info');
+      $("#tbl12").removeClass('btn btn-info');
+      $("#tbl12").addClass('btn btn-outline-info');
+  } else if(elem.id == "tbl12"){
+      tbl1 = "Tidak";
+      $("#tbl12").removeClass('btn btn-outline-info');
+      $("#tbl12").addClass('btn btn-info');
+      $("#tbl11").removeClass('btn btn-info');
+      $("#tbl11").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tbl21"){
+      tbl2 = "Ya";
+      $("#tbl21").removeClass('btn btn-outline-info');
+      $("#tbl21").addClass('btn btn-info');
+      $("#tbl22").removeClass('btn btn-info');
+      $("#tbl22").addClass('btn btn-outline-info');
+  } else if(elem.id == "tbl22"){
+      tbl2 = "Tidak";
+      $("#tbl22").removeClass('btn btn-outline-info');
+      $("#tbl22").addClass('btn btn-info');
+      $("#tbl21").removeClass('btn btn-info');
+      $("#tbl21").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tbl31"){
+      tbl3 = "Ya";
+      $("#tbl31").removeClass('btn btn-outline-info');
+      $("#tbl31").addClass('btn btn-info');
+      $("#tbl32").removeClass('btn btn-info');
+      $("#tbl32").addClass('btn btn-outline-info');
+  } else if(elem.id == "tbl32"){
+      tbl3 = "Tidak";
+      $("#tbl32").removeClass('btn btn-outline-info');
+      $("#tbl32").addClass('btn btn-info');
+      $("#tbl31").removeClass('btn btn-info');
+      $("#tbl31").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "tsh1"){
+      tsh = "Ya";
+      $("#tsh1").removeClass('btn btn-outline-info');
+      $("#tsh1").addClass('btn btn-info');
+      $("#tsh2").removeClass('btn btn-info');
+      $("#tsh2").addClass('btn btn-outline-info');
+  } else if(elem.id == "tsh2"){
+      tsh = "Tidak";
+      $("#tsh2").removeClass('btn btn-outline-info');
+      $("#tsh2").addClass('btn btn-info');
+      $("#tsh1").removeClass('btn btn-info');
+      $("#tsh1").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "taspro11"){
+      taspro1 = "Ya";
+      $("#taspro11").removeClass('btn btn-outline-info');
+      $("#taspro11").addClass('btn btn-info');
+      $("#taspro12").removeClass('btn btn-info');
+      $("#taspro12").addClass('btn btn-outline-info');
+  } else if(elem.id == "tsh2"){
+      taspro1 = "Tidak";
+      $("#taspro12").removeClass('btn btn-outline-info');
+      $("#taspro12").addClass('btn btn-info');
+      $("#taspro11").removeClass('btn btn-info');
+      $("#taspro11").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "taspro21"){
+    taspro2 = "Ya";
+      $("#taspro21").removeClass('btn btn-outline-info');
+      $("#taspro21").addClass('btn btn-info');
+      $("#taspro22").removeClass('btn btn-info');
+      $("#taspro22").addClass('btn btn-outline-info');
+  } else if(elem.id == "taspro22"){
+    taspro2 = "Tidak";
+      $("#taspro22").removeClass('btn btn-outline-info');
+      $("#taspro22").addClass('btn btn-info');
+      $("#taspro21").removeClass('btn btn-info');
+      $("#taspro21").addClass('btn btn-outline-info');
+  }
+  if(elem.id == "taspro31"){
+    taspro3 = "Ya";
+      $("#taspro31").removeClass('btn btn-outline-info');
+      $("#taspro31").addClass('btn btn-info');
+      $("#taspro32").removeClass('btn btn-info');
+      $("#taspro32").addClass('btn btn-outline-info');
+  } else if(elem.id == "taspro32"){
+    taspro3 = "Tidak";
+      $("#taspro32").removeClass('btn btn-outline-info');
+      $("#taspro32").addClass('btn btn-info');
+      $("#taspro31").removeClass('btn btn-info');
+      $("#taspro31").addClass('btn btn-outline-info');
+  }
+
+  var noIdentitas = document.getElementById('notasnik').value;
+  var nama        = document.getElementById('nama').value;
+  var notelp      = document.getElementById('notelp').value;
+  var provinsi    = document.getElementById('provinsi').value;
+  var pendapatan  = document.getElementById('pendapatan').value;
+
+  if(elem.id == "stepKirim2" || elem.id == "stepKirim3" || elem.id == "stepKirim4"){
+    $.ajax({
+    type: "POST",
+    url: "surveyTaspenGroup/store",
+    data: {"noIdentitas":noIdentitas, "nama":nama, "notelp":notelp,
+          "provinsi":provinsi, "usia":usia, "jenkel":jenkel, "pendapatan":pendapatan,
+          "peserta_tsp":peserta_tsp, "status_id":status_id,
+          "tpb":tpb, "tss":tss, "tds":tds, "tsh":tsh,
+          'tbl1':tbl1, 'tbl2':tbl2, 'tbl3':tbl3,
+          'taspro1':taspro1, 'taspro2':taspro2, 'taspro3':taspro3},
+    cache: false,
+    timeout: 10000,
+    error: function(){
+      sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+      $("#preloader").hide();
+    },
+    success: function(msg){
+      $("#preloader").hide();
+      sweetAlert("Success", "Data berhasil disimpan. Terima kasih atas partisipasi Anda dalam mengisi survey.", "success");
+      window.location.href = "https://tos.taspen.co.id/surveyTaspenGroup";
+      }
+    });
+  }
+
+}
+
+
+function cekdata(elem){
+  if (elem.id == "kps1") {
+    status_kps = 1;
+    $("#status_peserta").show();
+    $("#kps1").removeClass('btn btn-outline-info');
+    $("#kps1").addClass('btn btn-info');
+    $("#kps2").removeClass('btn btn-info');
+    $("#kps2").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "kps2") {
+    status_kps = 2;
+    $("#status_peserta").show();
+    $("#kps2").removeClass('btn btn-outline-info');
+    $("#kps2").addClass('btn btn-info');
+    $("#kps1").removeClass('btn btn-info');
+    $("#kps1").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "id1") {
+    status_id = 1;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id2") {
+    status_id = 2;
+    $("#id2").removeClass('btn btn-outline-info');
+    $("#id2").addClass('btn btn-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id3") {
+    status_id = 3;
+    $("#id3").removeClass('btn btn-outline-info');
+    $("#id3").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id4") {
+    status_id = 4;
+    $("#id4").removeClass('btn btn-outline-info');
+    $("#id4").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id5") {
+    status_id = 5;
+    $("#id5").removeClass('btn btn-outline-info');
+    $("#id5").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  else if (elem.id == "klaimlain") {
+    $("#show_jenis").show();
+    $("#klaimlain").hide();
+    $("#show_formulir").hide();
+  }
+  else if (elem.id == "nonklaimlain") {
+    $("#showDaftarKlaim").show();
+    $("#klaimlain").hide();
+    $("#show_formulir").hide();
+  }
+  if(status_id!=0){
+    var statusPemohon = status_kps+""+status_id;
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "getMappingKlaim",
+      data: "id_jenis="+statusPemohon,
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#preloader").hide();
+        $("#show_jenis").html(msg);
+        }
+    });
+  }
+
+}
+
+function cekdatanonklaim(elem){
+  if (elem.id == "kps1") {
+    status_kps = 1;
+    $("#status_peserta").show();
+    $("#kps1").removeClass('btn btn-outline-info');
+    $("#kps1").addClass('btn btn-info');
+    $("#kps2").removeClass('btn btn-info');
+    $("#kps2").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "kps2") {
+    status_kps = 2;
+    $("#status_peserta").show();
+    $("#kps2").removeClass('btn btn-outline-info');
+    $("#kps2").addClass('btn btn-info');
+    $("#kps1").removeClass('btn btn-info');
+    $("#kps1").addClass('btn btn-outline-info');
+  }
+  if (elem.id == "id1") {
+    status_id = 1;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id2") {
+    status_id = 2;
+    $("#id2").removeClass('btn btn-outline-info');
+    $("#id2").addClass('btn btn-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id3") {
+    status_id = 3;
+    $("#id3").removeClass('btn btn-outline-info');
+    $("#id3").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id4") {
+    status_id = 4;
+    $("#id4").removeClass('btn btn-outline-info');
+    $("#id4").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#id5").removeClass('btn btn-info');
+    $("#id5").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  if (elem.id == "id5") {
+    status_id = 5;
+    $("#id5").removeClass('btn btn-outline-info');
+    $("#id5").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#id3").removeClass('btn btn-info');
+    $("#id3").addClass('btn btn-outline-info');
+    $("#id4").removeClass('btn btn-info');
+    $("#id4").addClass('btn btn-outline-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#show_formulir").hide();
+  }
+  else if (elem.id == "klaimlain") {
+    $("#show_jenis").show();
+    $("#klaimlain").hide();
+    $("#show_formulir").hide();
+  }
+  else if (elem.id == "nonklaimlain") {
+    $("#showDaftarKlaim").show();
+    $("#klaimlain").hide();
+    $("#show_formulir").hide();
+  }
+  if(status_id!=0){
+    var statusPemohon = status_kps+""+status_id;
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "getMappingNonKlaim",
+      data: "id_jenis="+statusPemohon,
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#preloader").hide();
+        $("#show_jenis").html(msg);
+        }
+    });
+  }
+
+}
+function cekdata1(elem){
+  if (elem.id == "id1") {
+    jenis_id = 1;
+    $("#id1").removeClass('btn btn-outline-info');
+    $("#id1").addClass('btn btn-info');
+    $("#id2").removeClass('btn btn-info');
+    $("#id2").addClass('btn btn-outline-info');
+    $("#status_peserta").show();
+  }
+  else if (elem.id == "id2") {
+    jenis_id = 2;
+    $("#id2").removeClass('btn btn-outline-info');
+    $("#id2").addClass('btn btn-info');
+    $("#id1").removeClass('btn btn-info');
+    $("#id1").addClass('btn btn-outline-info');
+    $("#status_peserta").show();
+  }
+  else if (elem.id == "kps1") {
+    jenis_kps = 1;
+    $("#kps1").removeClass('btn btn-outline-info');
+    $("#kps1").addClass('btn btn-info');
+    $("#kps2").removeClass('btn btn-info');
+    $("#kps2").addClass('btn btn-outline-info');
+    $("#jenis_klaim").show();
+  }
+  else if (elem.id == "kps2") {
+    jenis_kps = 2;
+    $("#kps2").removeClass('btn btn-outline-info');
+    $("#kps2").addClass('btn btn-info');
+    $("#kps1").removeClass('btn btn-info');
+    $("#kps1").addClass('btn btn-outline-info');
+    $("#jenis_klaim").show();
+  }
+  if(jenis_id==1 && jenis_kps==1){
+    jenis_hasil=1;
+  } else if(jenis_id==1 && jenis_kps==2){
+    jenis_hasil=2;
+  } else if(jenis_id==2 && jenis_kps==1){
+    jenis_hasil=3;
+  } else if(jenis_id==2 && jenis_kps==2){
+    jenis_hasil=4;
+  }
+  if(jenis_hasil!=0){
+    document.getElementById("hubkelPilihan").value = jenis_hasil;
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "getMappingKlaim",
+      data: "id_jenis="+jenis_hasil,
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#preloader").hide();
+        $("#show_jenis").html(msg);
+        }
+    });
+  }
+}
+
+function getFormulir(elem){
+  var jenisKlaim = elem.id;
+  var hubkelPemohon = document.getElementById('hubkel_pemohon').value;
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "getFormulir",
+    data: {"hubkel_pemohon":hubkelPemohon, "id_jenis":jenisKlaim},
+    cache: false,
+    timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout11. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+    success: function(msg){
+      $("#show_formulir").html(msg);
+      }
+  });
+
+  $.ajax({
+    type: "POST",
+    url: "getUpload",
+    data: {"hubkel_pemohon":hubkelPemohon, "id_jenis":jenisKlaim},
+    cache: false,
+    timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+    success: function(msg){
+      $("#show_upload").html(msg);
+      $("#preloader").hide();
+      $("#showDaftarKlaim").hide();
+      $("#show_formulir").show();
+      $("#klaimlain").show();
+      }
+  });
+  //untuk menentukan default pemohon TASPEN LIFE
+  document.getElementById("isiklaim").value = jenisKlaim;
+  if(jenisKlaim==1 || jenisKlaim==27){
+    $("#tds-modal").show();
+    $("#tpb-modal").hide();
+  } else if(jenisKlaim==2){
+    $("#tpb-modal").show();
+    $("#tds-modal").hide();
+  }
+}
+
+function getFormulirNonKlaim(elem){
+  var jenisKlaim = elem.id;
+  var hubkelPemohon = document.getElementById('hubkel_pemohon').value;
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "getFormulirNonKlaim",
+    data: {"hubkel_pemohon":hubkelPemohon, "id_jenis":jenisKlaim},
+    cache: false,
+    timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+    success: function(msg){
+      $("#show_formulir").html(msg);
+      }
+  });
+
+  $.ajax({
+    type: "POST",
+    url: "getUpload",
+    data: {"hubkel_pemohon":hubkelPemohon, "id_jenis":jenisKlaim},
+    cache: false,
+    success: function(msg){
+      $("#show_upload").html(msg);
+      $("#preloader").hide();
+      $("#showDaftarKlaim").hide();
+      $("#show_formulir").show();
+      $("#klaimlain").show();
+      }
+  });
+  //untuk menentukan default pemohon
+  document.getElementById("isiklaim").value = jenisKlaim;
+}
+
+const checkIsCanSubmitButton = () => {
+  $('.step2b').prop('disabled', validatioArray.length > 0);
+};
+let validatioArray = [
+  'nipNumber'
+];
+
+$('#notas').on('input', function(e) {
+  const nipEl = $(this);
+  const maxCharInput = parseInt(nipEl.attr('maxlength'), 10);
+  const minCharInput = parseInt(nipEl.attr('minlength'), 10);
+  const regexValidation = /[^A-Za-z0-9]+/g;
+  const newValue = nipEl.val().replace(regexValidation, '');
+  const isExactMaxChar = newValue.length == maxCharInput;
+  const isBelowMinChar = newValue.length < minCharInput;
+  const isAboveMaxChar = newValue.length > maxCharInput;
+  const errorEl = $('#nipVal');
+
+  // set new value in after we sanitized
+  nipEl.val(newValue);
+
+  if (isBelowMinChar) {
+    errorEl.text("NIP/NOTAS/NO_KPE minimal 8 karakter");
+
+    if (!validatioArray.includes('nipNumber')) {
+      validatioArray.push('nipNumber');
+    }
+  } else if (isAboveMaxChar) {
+    errorEl.text('');
+
+    let previousValue = nikEl.val().slice(0, maxCharInput);
+    nikEl.val(previousValue)
+  } else if (!isBelowMinChar && !isAboveMaxChar) {
+    errorEl.text('');
+
+    if (validatioArray.includes('nipNumber')) {
+      validatioArray.splice(validatioArray.indexOf('nipNumber'), 1);
+    }
+  }
+  checkIsCanSubmitButton();
+});
+
+function checkform(){
+  var nama = document.getElementById("nama_pemohon");
+  var minchar = '2';
+  const errorEl1 = $('#namaPemohonVal');
+  if (nama.value.length > minchar) {
+    errorEl1.text('');
+    valNama = 1;
+  } else {
+    errorEl1.text("Nama pemohon terlalu pendek");
+    valNama = 0;
+  }
+
+  var validasiNIK = /^\d+$/;
+  var NIK = document.getElementById("nik_pemohon");
+  var minchar = '16';
+  const errorEl2 = $('#nikPemohonVal');
+  if (NIK.value.match(validasiNIK) && NIK.value.length == minchar) {
+    errorEl2.text('');
+    valNik = 1;
+  } else {
+    errorEl2.text("NIK harus 16 digit angka");
+    valNik = 0;
+  }
+  var tgllhr = document.getElementById("tgllhr");
+  var minchar = '2';
+  const errorEl3 = $('#tglLhrPemohonVal');
+  if (tgllhr.value.length > minchar) {
+    errorEl3.text('');
+    valTgllhr = 1;
+  } else {
+    errorEl3.text("Tanggal lahir harus diisi");
+    valTgllhr = 0;
+  }
+
+  if(valNama == 1 && valNik == 1 && valTgllhr == 1){
+    document.getElementById("step3b").disabled = false;
+  } else {
+    document.getElementById("step3b").disabled = true;
+  }
+}
+
+function cekformymk() {
+    // Validasi tanggal kejadian
+    var tglkejadian = document.getElementById("tglkejadian");
+    const errorTanggal = $('#tglkejadianVal');
+
+    if (tglkejadian && tglkejadian.value.length >= 2) {
+        valid_tgl = 1;
+        errorTanggal.text('');
+    } else {
+        valid_tgl = 0;
+        errorTanggal.text('Tanggal kejadian harus diisi');
+    }
+
+    // Validasi nomor rekening
+    var createRekening = $('#createRekening').val();
+    var norek = document.getElementById("no_rek");
+    var validasiNorek = /^[0-9]+$/;
+    const errorNorek = $('#norekVal');
+
+    if (createRekening === '1') {
+        valid_norek = 1;
+        errorNorek.text('');
+    } else if (
+        norek &&
+        validasiNorek.test(norek.value) &&
+        norek.value.length >= 8 &&
+        norek.value.length <= 16
+    ) {
+        valid_norek = 1;
+        errorNorek.text('');
+    } else {
+        valid_norek = 0;
+        errorNorek.text(
+            'No rekening antara 8 sampai 16 angka'
+        );
+    }
+
+    // Validasi nomor HP
+    var nohp = document.getElementById("no_hp");
+    var validasiNoHp = /^[0-9]+$/;
+    const errorNoHp = $('#nohpVal');
+
+    if (
+        nohp &&
+        validasiNoHp.test(nohp.value) &&
+        nohp.value.length >= 8 &&
+        nohp.value.length <= 13
+    ) {
+        valid_nohp = 1;
+        errorNoHp.text('');
+    } else {
+        valid_nohp = 0;
+        errorNoHp.text(
+            'No Handphone antara 8 sampai 13 angka'
+        );
+    }
+
+    // Aktifkan tombol jika semua field yang relevan valid
+    // $('#step4b').prop(
+    //     'disabled',
+    //     !(
+    //         valid_tgl === 1 &&
+    //         valid_norek === 1 &&
+    //         valid_nohp === 1
+    //     )
+    // );
+}
+
+
+
+function cekStep(elem){
+  if (elem.id == "step1b") {
+    $("#step1").hide();
+    $("#step2").show();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").show();
+    $("#pstep3").hide();
+    $("#pstep4").hide();
+  }
+  else if (elem.id == "step2a") {
+    $("#step1").show();
+    $("#step2").hide();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").show();
+    $("#pstep2").hide();
+    $("#pstep3").hide();
+    $("#pstep4").hide();
+  }
+  else if (elem.id == "step2b") {
+    //cek notas
+    var notas = document.getElementById('notas').value;
+    var jnsklaim = document.getElementById('isiklaim').value;
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "getNotas",
+      data: {"jnsklaim":jnsklaim, "notas":notas},
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#show_notas").html(msg);
+        var cekNotas = document.getElementById('cekNotas').value;
+        var namapemohon = document.getElementById('nama_pemohon').value;
+        // var notasPeserta = document.getElementById('notasPeserta').value;
+        if(cekNotas==1){
+          $("#step1").hide();
+          $("#step2").hide();
+          $("#step3").show();
+          $("#step4").hide();
+          $("#step5").hide();
+          $("#preloader").hide();
+
+          $("#pstep1").hide();
+          $("#pstep2").hide();
+          $("#pstep3").show();
+          $("#pstep4").hide();
+
+          if(jnsklaim=='x'){
+            $("#ymk1").hide();
+            $("#ymk2").show();
+            document.getElementById("isinamaymk").value = namapemohon;
+            document.getElementById("isinamaymksubmit").value = "1-00-1-"+namapemohon;
+          }else {
+          $("#ymk1").show();
+          $("#ymk2").hide();
+          $("#showlistpemohon").show();
+          var notasPeserta = document.getElementById('notasPeserta').value;
+          $.ajax({
+            type: "POST",
+            url: "getKeluarga",
+            data: "notas="+notasPeserta,
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+              $("#ymk1").html(msg);
+              }
+          });
+          $.ajax({
+            type: "POST",
+            url: "getKeluargaPolis",
+            data: "notas="+notasPeserta,
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+                jenisKlaim = document.getElementById("isiklaim").value;
+                if(jenisKlaim==2){
+                  $("#keluarga_polis").html(msg);
+                }
+              }
+          });
+
+          $.ajax({
+            type: "POST",
+            url: "getListPemohon",
+            data: "notas="+notasPeserta,
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+              $("#show_lpemohon").html(msg);
+            }
+          });
+
+          $.ajax({
+            type: "POST",
+            url: "getCabangPeserta",
+            data: "notas="+notasPeserta,
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+              $("#show_cabangpeserta").html(msg);
+              }
+          });
+
+          }
+        }else if(cekNotas==3){
+          sweetAlert("Oops...", "Pengajuan yang sama sudah diajukan sebelumnya dan sedang diproses oleh petugas.", "error");
+          $("#step1").hide();
+          $("#step2").show();
+          $("#step3").hide();
+          $("#step4").hide();
+          $("#step5").hide();
+          $("#preloader").hide();
+
+          $("#pstep1").hide();
+          $("#pstep2").show();
+          $("#pstep3").hide();
+          $("#pstep4").hide();
+        } else if(cekNotas==2){
+          sweetAlert("Oops...", "Data tidak ditemukan!", "error");
+          $("#step1").hide();
+          $("#step2").show();
+          $("#step3").hide();
+          $("#step4").hide();
+          $("#step5").hide();
+          $("#preloader").hide();
+
+          $("#pstep1").hide();
+          $("#pstep2").show();
+          $("#pstep3").hide();
+          $("#pstep4").hide();
+        }
+        }
+    });
+  }
+  else if (elem.id == "step3a") {
+    $("#step1").hide();
+    $("#step2").show();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").show();
+    $("#pstep3").hide();
+    $("#pstep4").hide();
+  }
+  else if (elem.id == "step3b") {
+    var nik = document.getElementById('nik_pemohon').value;
+    var tgllhr = document.getElementById('tgllhr').value;
+    var namapemohon = document.getElementById('nama_pemohon').value;
+    $("#preloader").show();
+    $.ajax({
+      type: "POST",
+      url: "cekPemohon",
+      data: {"nik":nik, "tgllhr":tgllhr, "namapemohon":namapemohon},
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#show_pemohon").html(msg);
+        $("#preloader").hide();
+        var cekPemohon = document.getElementById('cekPemohon').value;
+        var cekNotif = document.getElementById('cekNotif').value;
+          if(cekPemohon==1){
+            $("#step1").hide();
+            $("#step2").hide();
+            $("#step3").hide();
+            $("#step4").show();
+            $("#step5").hide();
+
+            $("#pstep1").hide();
+            $("#pstep2").hide();
+            $("#pstep3").hide();
+            $("#pstep4").show();
+
+          } else {
+            sweetAlert("Oops...", cekNotif, "error");
+            $("#step1").hide();
+            $("#step2").hide();
+            $("#step3").show();
+            $("#step4").hide();
+            $("#step5").hide();
+
+            $("#pstep1").hide();
+            $("#pstep2").hide();
+            $("#pstep3").show();
+            $("#pstep4").hide();
+          }
+        }
+    });
+
+
+  }
+  else if (elem.id == "step4a") {
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").show();
+    $("#step4").hide();
+    $("#step5").hide();
+
+    $("#pstep1").hide();
+    $("#pstep2").hide();
+    $("#pstep3").show();
+    $("#pstep4").hide();
+  }
+  else if (elem.id == "step4b") {
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").hide();
+    $("#step4").hide();
+    $("#step5").show();
+  }
+}
+
+
+var requestCekRekening = null;
+
+$('#mitra_bayar').on('change', function () {
+    var notas = $('#notasPeserta').val();
+    var kdkelbayar = String($(this).val() || '');
+    var kdklaim = $('#kdklaim').val();
+    aktifkanRekeningManual({
+        kosongkanRekening: true
+    });
+    if (requestCekRekening) {
+        requestCekRekening.abort();
+        requestCekRekening = null;
+    }
+
+    $('#bankmantap').modal('hide');
+    $('#preloader').show();
+
+    $.ajax({
+        url: 'cekFlagging',
+        method: 'POST',
+        data: {
+            kdkelbayar: kdkelbayar,
+            notas: notas,
+            kdklaim: kdklaim
+        }
+    })
+    .done(function (response) {
+        const result = typeof response === 'string'
+            ? JSON.parse(response)
+            : response;
+
+        if (result.resultCode === '1') {
+            $('#preloader').hide();
+
+            sweetAlert(
+                'Oops...',
+                result.resultDesc,
+                'error'
+            );
+
+            return;
+        }
+        $.ajax({
+            type: 'POST',
+            url: 'getCabangBank',
+            data: {
+                kdkelbayar: kdkelbayar,
+                notas: notas
+            },
+            timeout: 10000
+        })
+        .done(function (msg) {
+            if (String($('#mitra_bayar').val()) !== kdkelbayar) {
+                return;
+            }
+
+            $('#cabang_bank').html(msg).show();
+
+            const $cabangSelect = $('#cabang_bank').find(
+                "select[name='cabang_bank']"
+            );
+
+            $cabangSelect
+                .prop('disabled', false)
+                .prop('required', true);
+
+            if (kdkelbayar !== '25') {
+                $('#preloader').hide();
+
+                aktifkanRekeningManual({
+                    kosongkanRekening: true
+                });
+
+                return;
+            }
+
+            if(kdklaim==='1' || kdklaim==='26' || kdklaim==='27'){
+              cekRekeningBankMantap(kdkelbayar);
+
+            } else {
+              $('#preloader').hide();
+            }
+        })
+        .fail(function () {
+            $('#preloader').hide();
+
+            sweetAlert(
+                'Oops...',
+                'Gagal mengambil daftar cabang bank.',
+                'warning'
+            );
+        });
+    })
+    .fail(function () {
+        $('#preloader').hide();
+
+        sweetAlert(
+            'Oops...',
+            'Gagal memeriksa data flagging.',
+            'error'
+        );
+    });
+});
+
+function cekRekeningBankMantap(kodeBankSaatRequest) {
+    var nik = $('#nik_pemohon').val();
+    var idPeserta = $('#nik_pemohon').val();
+    var nomorPensiun = $('#notas').val();
+    var namaLengkap = $('#nama_pemohon').val();
+
+    var tanggalLahir = $('#tgllhr')
+        .val()
+        .replace(
+            /^(\d{2})-(\d{2})-(\d{4})$/,
+            '$3-$2-$1'
+        );
+
+    requestCekRekening = $.ajax({
+        url: 'cekRekening',
+        method: 'POST',
+        timeout: 30000,
+        data: {
+            nik: nik,
+            idPeserta: idPeserta,
+            nomorPensiun: nomorPensiun,
+            namaLengkap: namaLengkap,
+            tanggalLahir: tanggalLahir,
+            inputer: nik
+        }
+    })
+    .done(function (response) {
+        if (
+            String($('#mitra_bayar').val()) !==
+            String(kodeBankSaatRequest)
+        ) {
+            return;
+        }
+
+        let result = response;
+
+        try {
+            if (typeof result === 'string') {
+                result = JSON.parse(result);
+            }
+
+            if (typeof result === 'string') {
+                result = JSON.parse(result);
+            }
+        } catch (error) {
+
+            aktifkanRekeningManual({
+                kosongkanRekening: true
+            });
+
+            $('#bankmantap').modal('hide');
+
+            sweetAlert(
+                'Oops...',
+                'Format respons inquiry rekening tidak sesuai.',
+                'error'
+            );
+
+            return;
+        }
+        const responseCode = String(
+            result?.responseCode ?? ''
+        ).trim();
+
+        const responseMessage = String(
+            result?.responseMessage ?? ''
+        ).trim();
+
+        const nomorRekening = String(
+            result?.cekNorek ?? ''
+        ).trim();
+
+        const statusRekening = String(
+            result?.statusRekening ?? ''
+        ).trim().toUpperCase();
+        if (responseCode === '0000') {
+            $('#bankmantap').modal('hide');
+
+            $('#createRekening').val('0');
+            const $cabangWrap = $('#cabang_bank');
+            const $cabangSelect = $cabangWrap.find(
+                "select[name='cabang_bank']"
+            );
+
+            $cabangWrap.show();
+
+            $cabangSelect
+                .prop('disabled', false)
+                .prop('required', true);
+
+            if ($cabangSelect.data('select2')) {
+                $cabangSelect.trigger(
+                    'change.select2'
+                );
+            }
+            $('#fg_no_rek').show();
+
+            $('#no_rek')
+                .val(nomorRekening)
+                .prop('disabled', false)
+                .prop('required', true)
+                .prop('readonly', true)
+                .addClass('bg-light')
+                .attr(
+                    'title',
+                    'Nomor rekening ditemukan dari inquiry Bank Mantap'
+                );
+
+            $('#norekVal').text('');
+            $('#lanjut_eklim').hide();
+            $('#setuju').hide();
+            $('#tidakSetuju').hide();
+            $('#tnc').hide();
+            $('#acc_rek').hide();
+            $('#batal_rek').hide();
+
+            cekformymk();
+
+            var pesan =
+                'Nomor rekening ' +
+                nomorRekening +
+                ' berhasil diisi otomatis.';
+
+            if (statusRekening !== '') {
+                pesan +=
+                    ' Status rekening: ' +
+                    statusRekening +
+                    '.';
+            }
+
+            pesan +=
+                ' Silakan pilih kantor cabang bank.';
+
+            sweetAlert({
+                title: 'Nomor Rekening Ditemukan',
+                text: pesan,
+                type: 'success',
+                timer: 3000,
+                showConfirmButton: false
+            });
+
+            return;
+        }
+
+        aktifkanRekeningManual({
+            kosongkanRekening: true
+        });
+
+        $('#lanjut_eklim').hide();
+        $('#setuju').show();
+        $('#tidakSetuju').show();
+        $('#tnc').show();
+        $('#acc_rek').hide();
+        $('#batal_rek').hide();
+
+        $('#bankmantap').modal('show');
+    })
+    .fail(function (xhr, status) {
+        if (status === 'abort') {
+            return;
+        }
+
+        aktifkanRekeningManual({
+            kosongkanRekening: true
+        });
+
+        $('#bankmantap').modal('hide');
+
+        var pesan;
+
+        if (status === 'timeout') {
+            pesan =
+                'Inquiry rekening terlalu lama. ' +
+                'Silakan coba kembali.';
+        } else {
+            pesan =
+                xhr.responseJSON?.responseMessage ||
+                'Gagal memeriksa rekening Bank Mantap.';
+        }
+
+        sweetAlert(
+            'Oops...',
+            pesan,
+            'warning'
+        );
+    })
+    .always(function () {
+        requestCekRekening = null;
+        $('#preloader').hide();
+    });
+}
+
+function aktifkanRekeningManual(options = {}) {
+    const kosongkanRekening = options.kosongkanRekening !== false;
+
+    $('#createRekening').val('0');
+
+    // Tampilkan cabang bank
+    const $cabangWrap = $('#cabang_bank');
+    const $cabangSelect = $cabangWrap.find(
+        "select[name='cabang_bank']"
+    );
+
+    $cabangWrap.show();
+
+    $cabangSelect
+        .prop('disabled', false)
+        .prop('required', true);
+
+    // Tampilkan nomor rekening manual
+    $('#fg_no_rek').show();
+
+    $('#no_rek')
+        .prop('disabled', false)
+        .prop('required', true)
+        .prop('readonly', false)
+        .removeClass('bg-light')
+        .removeAttr('title');
+
+    if (kosongkanRekening) {
+        $('#no_rek').val('');
+    }
+
+    $('#norekVal').text('');
+
+    // Reset tampilan modal persetujuan
+    $('#acc_rek').hide();
+    $('#batal_rek').hide();
+}
+
+$('#id_provinsi').on('change', function(e) {
+  var id_dati1  = document.getElementById('id_provinsi').value;
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "cekDati2",
+    data: {"ID_DATI1":id_dati1},
+    cache: false,
+    timeout: 10000,
+    error: function(){
+      sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+      $("#preloader").hide();
+    },
+    success: function(msg){
+      $("#id_kabupaten").html(msg);
+      $('#id_kecamatan').html('<label>Plih Kecamatan*</label><select class="single-select3" name="id_dati3" required><option disabled value="" selected>Pilih Kecamatan</option></select>');
+      $('#id_kelurahan').html('<label>Plih Kelurahan*</label><select class="single-select3" name="id_dati4" required><option disabled value="" selected>Pilih Kelurahan</option></select>');
+      $('.single-select3').select2();
+      $("#preloader").hide();
+    }
+  });
+});
+
+$('#id_kabupaten').on('change', function(e) {
+  var id_dati2 = $("#id_dati2").val();
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "cekDati3",
+    data: {"ID_DATI2":id_dati2},
+    cache: false,
+    timeout: 10000,
+    error: function(){
+      sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+      $("#preloader").hide();
+    },
+    success: function(msg){
+      $("#id_kecamatan").html(msg);
+      $('#id_kelurahan').html('<label>Plih Kelurahan*</label><select class="single-select3" name="id_dati4" required><option disabled value="" selected>Pilih Kelurahan</option></select>');
+      $('.single-select3').select2();
+      $("#preloader").hide();
+    }
+  });
+});
+
+$('#id_kecamatan').on('change', function(e) {
+  var id_dati3 = $("#id_dati3").val();
+  $("#preloader").show();
+  $.ajax({
+    type: "POST",
+    url: "cekDati4",
+    data: {"ID_DATI3":id_dati3},
+    cache: false,
+    timeout: 10000,
+    error: function(){
+      sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+      $("#preloader").hide();
+    },
+    success: function(msg){
+      $("#id_kelurahan").html(msg);
+      $("#preloader").hide();
+    }
+  });
+});
+
+function AksiConsentForm(action) {
+    $("#preloader").show();
+
+    var nik = $("#nik_pemohon").val();
+    var statusOnboarding = action === "setuju" ? 2 : 3;
+
+    $.ajax({
+        url: "AksiConsentForm",
+        method: "POST",
+        timeout: 15000,
+        data: {
+            nik: nik,
+            statusOnboarding: statusOnboarding,
+            inputerTnc: nik
+        }
+    })
+    .done(function (response) {
+        var result;
+
+        try {
+            result = typeof response === "string"
+                ? JSON.parse(response)
+                : response;
+        } catch (error) {
+            sweetAlert(
+                "Oops...",
+                "Format respons API tidak sesuai.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (result?.metadata?.success !== true) {
+            sweetAlert(
+                "Oops...",
+                result?.metadata?.message ||
+                    "Proses persetujuan gagal.",
+                "error"
+            );
+
+            return;
+        }
+
+        if (action === "setuju") {
+            $('#createRekening').val('1');
+
+            $('#no_rek')
+                .val('')
+                .prop('required', false)
+                .prop('disabled', true)
+                .prop('readonly', true);
+
+            $('#fg_no_rek').hide();
+
+            const $cabangWrap = $('#cabang_bank');
+            const $cabangSelect = $cabangWrap.find(
+                "select[name='cabang_bank']"
+            );
+
+            $cabangSelect
+                .val('')
+                .prop('required', false)
+                .prop('disabled', true);
+
+            if ($cabangSelect.data('select2')) {
+                $cabangSelect
+                    .val(null)
+                    .trigger('change.select2');
+            }
+
+            $cabangWrap.hide();
+
+            $("#acc_rek").show();
+            $("#batal_rek").hide();
+
+            $("input[type='hidden'][name^='dokumen'][value='4']")
+                .each(function () {
+                    var hidden = $(this);
+                    var group = hidden.closest('.input-group');
+                    var fileInput = group.find(
+                        "input[type='file']"
+                    );
+
+                    fileInput.prop('required', true);
+
+                    hidden.closest('div')
+                        .find('.badge')
+                        .first()
+                        .removeClass('badge-light')
+                        .addClass('badge-warning')
+                        .text('Wajib');
+                });
+
+        } else {
+            /*
+             * Tidak setuju:
+             * - Bank Mantap tetap terpilih
+             * - Cabang ditampilkan
+             * - Nomor rekening diisi manual
+             */
+            aktifkanRekeningManual({
+                kosongkanRekening: true
+            });
+
+            // Jangan pakai .change()
+            $('#mitra_bayar').val('25').trigger('change.select2');
+
+            $("#acc_rek").hide();
+            $("#batal_rek").show();
+
+            $('#no_rek').focus();
+        }
+
+        $("#lanjut_eklim").show();
+        $("#setuju").hide();
+        $("#tidakSetuju").hide();
+        $("#tnc").hide();
+
+        cekformymk();
+    })
+    .fail(function (xhr, status) {
+        var pesan = status === "timeout"
+            ? "Proses terlalu lama. Silakan coba kembali."
+            : "Gagal memproses persetujuan rekening.";
+
+        sweetAlert("Oops...", pesan, "error");
+    })
+    .always(function () {
+        // Selalu dijalankan untuk sukses, gagal, dan timeout
+        $("#preloader").hide();
+    });
+}
+
+
+function tidakSetuju() {
+  $("#lanjut_eklim").show();
+  $("#setuju").hide();
+  $("#tidakSetuju").hide();
+  $("#tnc").hide();
+  $("#acc_rek").hide();
+  $("#batal_rek").show();
+  $("#preloader").hide();
+  // document.getElementById("setuju_rekening").value = "0";
+}
+
+//rekening
+function checkformrek(){
+  var nama = document.getElementById("nama_pemohon");
+  var minchar = '2';
+  const errorEl1 = $('#namaPemohonVal');
+  if (nama.value.length > minchar) {
+    errorEl1.text('');
+    valNama = 1;
+  } else {
+    errorEl1.text("Nama pemohon terlalu pendek");
+    valNama = 0;
+  }
+
+  var validasiNIK = /^\d+$/;
+  var NIK = document.getElementById("nik_pemohon");
+  var minchar = '16';
+  const errorEl2 = $('#nikPemohonVal');
+  if (NIK.value.match(validasiNIK) && NIK.value.length == minchar) {
+    errorEl2.text('');
+    valNik = 1;
+  } else {
+    errorEl2.text("NIK harus 16 digit angka");
+    valNik = 0;
+  }
+  var tgllhr = document.getElementById("tgllhr");
+  var minchar = '2';
+  const errorEl3 = $('#tglLhrPemohonVal');
+  if (tgllhr.value.length > minchar) {
+    errorEl3.text('');
+    valTgllhr = 1;
+  } else {
+    errorEl3.text("Tanggal lahir harus diisi");
+    valTgllhr = 0;
+  }
+
+  if(valNama == 1 && valNik == 1 && valTgllhr == 1){
+    document.getElementById("step7b").disabled = false;
+  } else {
+    document.getElementById("step7b").disabled = true;
+  }
+}
+//end of rek
+
+
+</script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#pengajuan").hide();
+    $("#btn_pengajuan").hide();
+    var htmlobjek;
+      $("#id_developer").change(function(){
+        var id_developer = $("#id_developer").val();
+        $.ajax({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "POST",
+            url: "https://tos.taspen.co.id/get_lokasi",
+            data: {id_developer:id_developer},
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+                $("#id_lokasi").html(msg);
+            }
+        });
+      });
+      $("#id_lokasi").change(function(){
+        var id_developer = $("#id_developer").val();
+        var id_lokasi = $("#lokasi_kddati1").val();
+        $.ajax({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "POST",
+            url: "https://tos.taspen.co.id/get_proyek",
+            data: {id_developer:id_developer,id_lokasi:id_lokasi},
+            cache: false,
+            timeout: 10000,
+            error: function(){
+              sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+              $("#preloader").hide();
+            },
+            success: function(msg){
+                $("#id_proyek").html(msg);
+            }
+        });
+      });
+
+
+    $("#provinsi").change(function(){
+      var kddati1 = $("#provinsi").val();
+      $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      type: "POST",
+          url: "https://tos.taspen.co.id/get_kabupaten",
+          data: {kddati1:kddati1},
+          cache: false,
+          timeout: 10000,
+          error: function(){
+            sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+            $("#preloader").hide();
+          },
+          success: function(msg){
+              $("#kabupaten").html(msg);
+          }
+      });
+    });
+
+    $("#kabupaten").change(function(){
+    var kddati1 = $("#provinsi").val();
+    var kddati2 = $("#kddati2").val();
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      type: "POST",
+      url: "https://tos.taspen.co.id/get_kecamatan",
+      data: {kddati1:kddati1, kddati2:kddati2},
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+
+        $("#kecamatan").html(msg);
+        }
+    });
+  });
+
+  $("#kecamatan").change(function(){
+    var kddati1 = $("#provinsi").val();
+    var kddati2 = $("#kddati2").val();
+    var kddati3 = $("#kddati3").val();
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      type: "POST",
+      url: "https://tos.taspen.co.id/get_kelurahan",
+      data: {kddati1:kddati1, kddati2:kddati2, kddati3:kddati3},
+      cache: false,
+      timeout: 10000,
+      error: function(){
+        sweetAlert("Oops...", "Request Timeout. Mohon Ulang kembali", "warning");
+        $("#preloader").hide();
+      },
+      success: function(msg){
+        $("#kelurahan").html(msg);
+        }
+    });
+  });
+});
+</script>
+
+<script type="text/javascript">
+function ShowHideDiv() {
+  var chkYes = document.getElementById("chkYes");
+  dvthn.style.display = chkYes.checked ? "block" : "none";
+}
+function cekdataMerchant(elem){
+  if (elem.id == "setuju") {
+    $("#pengajuan").show();
+    $("#tnc").hide();
+    $("#btn_pengajuan").show();
+  }
+  if (elem.id == "batal") {
+    $("#pengajuan").hide();
+    $("#tnc").show();
+    $("#btn_pengajuan").hide();
+    window.location = "http://localhost/merchant/public/";
+  }
+}
+</script>
+
+<script>
+  function widgetCarousel()
+  {
+
+    /*  testimonial one function by = owl.carousel.js */
+    jQuery('.widget-carousel').owlCarousel({
+      loop:false,
+      margin:30,
+      nav:true,
+      autoplaySpeed: 3000,
+      navSpeed: 3000,
+      paginationSpeed: 3000,
+      slideSpeed: 3000,
+      smartSpeed: 3000,
+      autoplay: false,
+      dots: false,
+      navText: ['<i class="fa fa-caret-left"></i>', '<i class="fa fa-caret-right"></i>'],
+      responsive:{
+        0:{
+          items:1
+        },
+
+        480:{
+          items:2
+        },
+
+        1200:{
+          items:3
+        },
+        1750:{
+          items:4
+        }
+      }
+    })
+  }
+  function carouselReview(){
+    /*  testimonial one function by = owl.carousel.js */
+    jQuery('.testimonial-one').owlCarousel({
+      loop:true,
+      autoplay:true,
+      margin:0,
+      nav:false,
+      dots: false,
+      navText: [''],
+      responsive:{
+        0:{
+          items:1
+        },
+
+        480:{
+          items:1
+        },
+
+        767:{
+          items:1
+        },
+        1000:{
+          items:1
+        }
+      }
+    })
+    /*Custom Navigation work*/
+    jQuery('#next-slide').on('click', function(){
+       $('.testimonial-one').trigger('next.owl.carousel');
+    });
+
+    jQuery('#prev-slide').on('click', function(){
+       $('.testimonial-one').trigger('prev.owl.carousel');
+    });
+    /*Custom Navigation work*/
+  }
+
+  jQuery(window).on('load',function(){
+    setTimeout(function(){
+      widgetCarousel();
+      carouselReview();
+    }, 1000);
+  });
+</script>
+
+
+</body>
+</html>
